@@ -3,6 +3,7 @@ dotenv.config();
 import express from 'express';
 import mongoose from 'mongoose';
 import router from './router/homeRouter.js';
+mongoose.set('strictQuery', false);
 
 const app = express();
 const port = process.env.PORT || '8000';
