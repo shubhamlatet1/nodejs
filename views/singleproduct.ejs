@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('./partials/tags.ejs')%>
+  </head>
+  <body>
+    <%-include('./partials/nav.ejs')%>
+    <div class="main">
+      <div class="single_products">
+        <div class="single_products_heading">
+          <li class="single_products_home">
+            <a href="/">Home > </a>
+          </li>
+          <li class="single_products_current" aria-current="page">
+            <%- products.name %>
+          </li>
+        </div>
+      </div>
+      <section class="single_products_description">
+        <div class="single_products_image">
+          <img src="/images/<%=products.imageUrl%>" alt="<%=products.name%>" />
+        </div>
+        <div class="single_products_details">
+          <h3 class="single_products_name">Name: <%=products.name%></h3>
+          <div class="iventory">
+            <% if(!products.available){ %>
+            <h5 class="inventory_error">Product not Available</h5>
+            <% } else{ %>
+            <h5 class="inventory_full">Product Available</h5>
+            <% } %>
+          </div>
+          <p class="company">Company: <%=products.company%></p>
+          <p class="price">Price: <%=products.discounted_Price%></p>
+          <p class="regular_price">
+            Regular Price: <%=products.regular_Price%>
+          </p>
+          <p class="rating">Regular Price: <%=products.rating%></p>
+          <p class="size">Size: <%=products.size%></p>
+        </div>
+      </section>
+    </div>
+
+    <!-- <script src="/js/index.js"></script> -->
+  </body>
+</html>

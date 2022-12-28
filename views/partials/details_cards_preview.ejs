@@ -1,0 +1,33 @@
+<div class="products-preview">
+  <% data.forEach(function(item){ %>
+  <div class="preview" data-target="<%=item.name%>">
+    <i class="fas fa-times"></i>
+    <img src="/images/<%=item.imageUrl%>" alt="" />
+    <h3><%=item.name%></h3>
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+      <span>( 250 )</span>
+    </div>
+    <div class="iventory">
+      <% if(!item.available){ %>
+      <h1 class="inventory_error">Product not Available</h1>
+      <% } else{ %>
+      <h1 class="inventory_full">Product Available</h1>
+      <% } %>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+      dolorem.
+    </p>
+    <div class="price">$2.00</div>
+    <div class="buttons">
+      <a href="#" class="buy">buy now</a>
+      <a href="#" class="cart">add to cart</a>
+    </div>
+  </div>
+  <% }); %>
+</div>

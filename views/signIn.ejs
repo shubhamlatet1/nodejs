@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('./partials/tags.ejs')%>
+  </head>
+  <body>
+    <%-include('./partials/nav.ejs')%>
+    <div class="login_container">
+      <div class="login_wrap">
+        <div class="heading">
+          <h1 class="login">Login</h1>
+          <p class="login_text">
+            Didnt have account?
+            <span><a href="#" class="login_a_text">Create an account</a></span>
+          </p>
+        </div>
+        <form class="login_form">
+          <div class="username common_input">
+            <label class="lable_form"> Username:</label>
+            <input
+              type="text"
+              name="name"
+              class="input_common"
+              placeholder="Enter your username"
+            />
+          </div>
+          <div class="password common_input">
+            <label class="lable_form"> password:</label>
+            <input
+              type="password"
+              name="password"
+              class="input_common"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="forgot common_input">
+            <a href="#" class="forgot_password">Forgot Password?</a>
+            <input
+              type="submit"
+              name="submit"
+              class="input_submit"
+              value="Sign In"
+            />
+          </div>
+        </form>
+
+        <div class="google">
+          <hr />
+          <br />
+          <span class="google_signin">Sign in with </span>
+          <a href="#">
+            <i class="fa-brands fa-google"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

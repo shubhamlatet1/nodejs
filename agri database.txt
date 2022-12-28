@@ -1,0 +1,10 @@
+Name of product
+name of comapny
+stars
+regular price
+discounted price
+You save
+Size(lt, kg)
+country of origin
+In stock/ Out off stock
+

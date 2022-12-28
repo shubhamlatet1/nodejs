@@ -1,0 +1,24 @@
+<% data.forEach(function(item){ %>
+<div class="details_card">
+  <div class="details_card_container" data-name="<%=item.name%>">
+    <div class="details_image">
+      <img src="/images/<%=item.imageUrl%>" alt="" />
+    </div>
+    <div class="details_text">
+      <div class="details_middle_text">
+        <p class="p_middle"><%=item.name%></p>
+      </div>
+      <div class="details_card_footer">
+        <div class="left">
+          <p>More has been updated</p>
+        </div>
+        <div class="right">
+          <a href="/singleproduct/<%=item.id%>">
+            <button class="details_button">More Info</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% }); %>
